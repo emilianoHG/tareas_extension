@@ -1,0 +1,21 @@
+body{
+	width: 600px;
+	min-height: 360px; 
+}
+
+h1{
+	font-size: 2em;
+	margin: 0;
+}
+
+hr{
+	width: 80%;
+}
+
+.btn{
+	font-size: 2em;
+}
+
+#box-control{
+	text-align: center;
+}

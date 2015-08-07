@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tareas</title>
+	<link rel="stylesheet" href="styles/materialize.min.css">
+	<link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+	<div class="container">
+		<section>
+			<h1 class="center-align">Tareas</h1>
+			<hr />
+		</section>
+		<section>
+			<form>
+				<input type="text" id="title" placeholder="Titulo" />
+				<br />
+				<textarea class="materialize-textarea" id="info" placeholder="Informacion"></textarea>
+				<br />
+				<div id="box-control">
+					<a class="waves-effect waves-light btn blue center-align" id="btn-save">Guardar <i class="mdi-content-save"></i></a>
+				</div>
+			</form>
+		</section>
+		<section>
+			 <ul id="list-tareas" class="collapsible center-block" data-collapsible="accordion">
+				
+			 </ul>
+		</section>
+	</div>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/materialize.min.js"></script>
+	<script src="scripts/db.js"></script>
+	<script src="scripts/popup.js"></script>
+</body>
+</html>

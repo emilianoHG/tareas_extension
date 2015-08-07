@@ -1,0 +1,27 @@
+{
+  "name": "Tareas", //Nombre de tu app
+  "version": "0.0.1", //version de tu app
+  "manifest_version": 2, //version del archivo manifest
+  "description": "Guarda tus tareas en el navegador",
+  "icons": { //Iconos que apareceran en el admin de extensiones "chrome://extensions/"
+    "16": "images/logo/note18.png",
+    "128": "images/logo/note48.png"
+  },
+  "browser_action": {
+    "default_icon": { //Iconos que apareceran al lado de la barra de navegacion
+      "19": "images/logo/note18.png",
+      "38": "images/logo/note36.png"
+    },
+    "default_title": "Tareas",
+    "default_popup": "popup.html" //Archivo que se mostrara al dar click en el icono del navegador
+  },
+  "omnibox": {
+    "keyword": "Tareas" //Palabras claves
+  },
+  "permissions": [ //Se agregan los permisos (cookies, history, downloads, management) para poder acceder a ciertos datos o acciones
+    "bookmarks",
+    "notifications",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
