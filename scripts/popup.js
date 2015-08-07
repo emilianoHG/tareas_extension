@@ -1,7 +1,19 @@
 $(document).ready(function () {
+	//Cargamos la DB
 	startDB();
 
+	/*
+		Si se usa materializecss para que funcione la lista se implementa el metodo de abajo
+	*/
+	$('.collapsible').collapsible({
+      accordion : false
+    });
+
+});
+
+function controles () {
 	$('#btn-save').click(function () {
+		//Obtenemos los valores de los campos de texto
 		var title = $('#title').val(),
 			info = $('#info').val();
 
@@ -9,13 +21,18 @@ $(document).ready(function () {
 		if (title != '' && info != '') {
 			add(title, info);
 		};
-
+		/*
+			Limpiamos el contenido de los inputs
+		*/
 		$('#title').val('');
 		$('#info').val('');
 	});
 
-	$('.collapsible').collapsible({
-      accordion : false
-    });
-
-});
+	$('.close').click(function (e) {
+		//Obtenemos el id del elemento que queremos borrar (se encuentrsa en el atributo 'data-id')
+		//TIENE QUE SER DE TIPO: "NUMBER"
+		var id = Number(e.target.getAttribute('data-id'));
+		//Borramos el elemento pasando el id capturado
+		deleteElement(id);
+	});
+}
