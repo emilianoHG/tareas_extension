@@ -82,7 +82,7 @@ function loadAll (callback) {
 		var list = '';
 		/*
 			Comenzamos  a añadir los elementos a una lista, por eso el codigo HTML de abajo.
-			Esto puede ser modificado, pero como uso materializecss las clases y estructura es importante.
+			Esto puede ser modificado, pero como uso materializecss estas clases y estructura es importante.
 		*/
 		for (var key in elements) {
 			list += '<li><div class="collapsible-header">'+
