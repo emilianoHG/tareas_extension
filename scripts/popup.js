@@ -1,7 +1,8 @@
+var database;
 $(document).ready(function () {
 	//Cargamos la DB
-	startDB();
-
+	database = new DB();
+	database.startDB();
 	/*
 		Si se usa materializecss para que funcione la lista se implementa el metodo de abajo
 	*/
@@ -19,7 +20,7 @@ function controles () {
 
 		//Agregar datos
 		if (title != '' && info != '') {
-			add(title, info);
+			database.add(title, info);
 		};
 		/*
 			Limpiamos el contenido de los inputs
@@ -33,6 +34,6 @@ function controles () {
 		//TIENE QUE SER DE TIPO: "NUMBER"
 		var id = Number(e.target.getAttribute('data-id'));
 		//Borramos el elemento pasando el id capturado
-		deleteElement(id);
+		database.deleteElement(id);
 	});
 }
