@@ -1,8 +1,6 @@
 # tareas_extension
 Extensión para chrome con almacenamiento local usando indexedDB
 
-Blog del desarrollador codigo2web.blogspot.mx
-
 Instalacion
 -Dirigirse a chrome://extensions/
 -Habilitar el modo programador
